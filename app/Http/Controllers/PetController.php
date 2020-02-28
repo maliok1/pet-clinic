@@ -9,9 +9,9 @@ use App\Pet;
 class PetController extends Controller
 {
     
-       public function show($id)
+       public function show($pet_id)
        {
-           $pet = Pet::findOrFail($id);
+           $pet = Pet::findOrFail($pet_id);
            $owner = $pet->owner;
            
           return view('pet.show', compact('pet', 'owner'));

@@ -1,6 +1,6 @@
 @extends ('layout')
 
-@section('content')
+@section('list')
   <h1>Owners & Dogs</h1>
 
   <table>
@@ -16,9 +16,9 @@
   @foreach ($owners as $owner)
 
   <tr>
-    <td>{{$owner->first_name}} </td> 
-    <td> {{$owner->surname}}</td>  
- 
+      <td><a href="{{ action ('OwnerController@show' ,[$owner->id])}}">{{$owner->first_name}}</a> </td> 
+      <td> <a href="{{ action ('OwnerController@show' ,[$owner->id])}}"> {{$owner->surname}} </a></td>  
+    
       @foreach ($owner->pets as $pet) 
       <td> <a href="{{action ('PetController@show', [$pet->id])}}">{{$pet->name}}</a> </td>
       <td> <img src="/pets/{{$pet->photo}}" alt="{{$pet->photo}}"> </td> 

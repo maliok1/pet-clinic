@@ -14,7 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+//main page
 Route::get('/index', 'OwnerController@index');
 
+//Owner
+Route::get('/show/owner/{id}', 'OwnerController@show');
+//DOG
 Route::get('/show/{pet_id}', 'PetController@show');
