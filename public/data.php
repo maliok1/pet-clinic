@@ -4,6 +4,8 @@ require_once 'DB_functions.php';
 
 DB::connect('localhost','clinic', 'root', 'rootroot');
 DB::statement('TRUNCATE TABLE `owners`' );
+DB::statement('TRUNCATE TABLE `pets`' );
+DB::statement('TRUNCATE TABLE `doctors`' );
 // DB::statement()
 $data = json_decode(file_get_contents('clients.json'), true);
 

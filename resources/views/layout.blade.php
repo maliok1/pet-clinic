@@ -8,10 +8,9 @@
 </head>
 <body>
   
-  @foreach ($owners as $owner)
-    {{$owner->first_name}}
-  @endforeach
-  
+
   @yield('content')
+
+  
 </body>
 </html>
