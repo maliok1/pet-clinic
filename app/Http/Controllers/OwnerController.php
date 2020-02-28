@@ -14,7 +14,7 @@ class OwnerController extends Controller
      $pets = Pet::all();
      
 
-     return view('index', compact('owners', 'pets'));
+     return view('owner.index', compact('owners', 'pets'));
     }
    
 }
