@@ -16,11 +16,11 @@ class CreatePetsTable extends Migration
         Schema::create('pets', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('owner_id');
-            $table->string('name');
-            $table->string('breed');
-            $table->integer('age');
-            $table->integer('weight');
-            $table->string('photo');
+            $table->string('name')->nullable();
+            $table->string('breed')->nullable();
+            $table->integer('age')->nullable();
+            $table->integer('weight')->nullable();
+            $table->string('photo')->nullable();
             $table->timestamps();
         });
     }
